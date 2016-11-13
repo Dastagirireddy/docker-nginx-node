@@ -20,3 +20,9 @@ docker-machine ip
 http://your-docker-machine-ip
 ```
 
+## Scale
+You can scale the application as many as you want.
+```
+docker-compose scale myapp:5
+```
+
