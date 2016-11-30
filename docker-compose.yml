@@ -1,19 +1,18 @@
-services:
-    db:
-        image: mongo
-        volumes:
-            - mongodbdata:/data/db
-    myapp:
-        build: .
-        links:
-            - db
-        environment: 
-            MONGODB: mongodb://db/test
-        ports:
-            - "3000"
-    nginx:
-        build: ./nginx
-        links:
-            - myapp
-        ports:
-            - "80:80"
+db:
+    image: mongo
+    volumes:
+        - mongodbdata:/data/db
+myapp:
+    build: .
+    links:
+        - db
+    environment: 
+        - MONGODB=mongodb://db/test
+    ports:
+        - "3000"
+nginx:
+    build: ./nginx
+    links:
+        - myapp
+    ports:
+        - "80:80"
