@@ -2,6 +2,12 @@ db:
     image: mongo
     volumes:
         - mongodbdata:/data/db
+redis:
+    image: redis
+    ports:
+        - "6379"
+    volumes:
+        - redisdata:/data
 myapp:
     build: .
     links:
