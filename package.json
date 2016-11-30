@@ -1,14 +1,15 @@
 {
-    "name": "sample-docker",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "dependencies": {
-        "express": "latest"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "sample-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "^4.7.0"
+  },
+  "author": "",
+  "license": "ISC"
 }
