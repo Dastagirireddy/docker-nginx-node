@@ -30,7 +30,7 @@ var client = redis.createClient(process.env.REDIS_HOST);
 
 client.incr('counter', function(err, counter) {
     if (err) return console.log(err);
-    connect.log('This page has been viewed ' + counter + ' times!');
+    console.log('This page has been viewed ' + counter + ' times!');
 });
 
 app.listen(process.env.PORT || 3000, function() {
