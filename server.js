@@ -1,13 +1,10 @@
 var express = require('express');
 var mongoose = require('mongoose');
-
 var app = express();
-
-console.log("env:::", process.env.NODE_ENV);
 
 app.use(express.static(__dirname));
 
-mongoose.connect("mongodb://104.131.3.219:27017/test", function(err, conn) {
+mongoose.connect('mongodb://' + process.env.MONGODB_PORT_27017_TCP_ADDR + ':' + process.env.MONGODB_PORT_27017_TCP_PORT + '/mydb', function(err, conn) {
 
     if (err) {
         console.log("Failed");

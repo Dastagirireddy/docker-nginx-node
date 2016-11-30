@@ -4,8 +4,16 @@ nginx:
         - myapp:myapp
     ports:
         - "80:80"
+mongo:
+    image: mongo
+    ports:
+        - "27017:27017"
+    volumes:
+        - mongodbdata:/data/db
 myapp:
     build: .
+    links:
+        - mongo:mongo
     environment: 
         - NODE_ENV=production
     ports:
