@@ -13,6 +13,8 @@ myapp:
     links:
         - db
         - redis
+    volumes:
+        - .:/myapp/src
     environment: 
         - MONGODB=mongodb://db/test
         - REDIS_HOST=redis://redis:6379
