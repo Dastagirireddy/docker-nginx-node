@@ -7,8 +7,6 @@ var app = express();
 
 app.use(express.static(__dirname));
 
-console.log("NODEMON Running");
-
 mongoose.connect(url, function(err, conn) {
 
     if (err) {
