@@ -3,7 +3,7 @@ FROM node:latest
 # Create app directory
 RUN mkdir -p /myapp
 
-RUN npm install -g supervisor
+RUN npm install -g nodemon
 
 WORKDIR /myapp
 
